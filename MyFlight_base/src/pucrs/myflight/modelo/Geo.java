@@ -2,9 +2,6 @@
 */ 
 
 package pucrs.myflight.modelo;
-
-import java.math.*;
-
 public class Geo {
 	private double latitude;
 	private double longitude;

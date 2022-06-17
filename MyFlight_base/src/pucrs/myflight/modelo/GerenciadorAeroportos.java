@@ -40,5 +40,4 @@ public class GerenciadorAeroportos {
             System.out.println(aero.toString());
         }
     }
-
 }

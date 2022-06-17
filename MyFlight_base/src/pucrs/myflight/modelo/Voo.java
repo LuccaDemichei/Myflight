@@ -51,7 +51,7 @@ public class Voo {
 
 	public String toString(){
 		return getDatahora().getDayOfMonth() + "/" + getDatahora().getMonth() + "/" + getDatahora().getYear()
-				+ " | " + getDatahora().getHour() + "h" + " | " + "Duracao: " + getDuracao() + " | " + getRota() + " | " + getStatus();
+				+ " as " + getDatahora().getHour() + "h" + " | " + "Duracao: " + getDuracao() + " | " + getRota() + " | " + getStatus();
 	}
 
 }
