@@ -26,6 +26,7 @@ public class Voo {
 		this.rota = rota;
 		this.datahora = LocalDateTime.of(2016, 8, 12, 12, 00);
 		this.duracao = duracao;
+		this.status = Status.CONFIRMADO;
 	}
 	
 	public Rota getRota() {

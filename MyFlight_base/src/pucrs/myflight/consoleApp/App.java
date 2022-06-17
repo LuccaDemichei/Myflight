@@ -93,7 +93,8 @@ public class App {
 
 		/*	Instanciação do Gerenciador de Voos
 		 *	Criação de três horários locais e três tempos de duração de voo
-		 *	Criação de três aeroportos e criacão de três geolocalizações
+		 *	Criação de três voos
+		 *  'voo4' instanciado para testar o conceito de sobrecarga
 		 *	Adicionados no objeto do gerenciador
 		 *	Utilização dos metodos para listar e buscar um aeroporto por um código específico 
 		*/
@@ -111,10 +112,6 @@ public class App {
 		Voo voo2 = new Voo(rota2, datahora2, duracao2);
 		Voo voo3 = new Voo(rota3, datahora3, duracao3);
 
-		/*
-		 * Voo criado para testar o conceito de sobrecarga
-		 */
-
 		Voo voo4 = new Voo(rota2, duracao3);
 
 		gerVoos.adicionar(voo1);
@@ -126,10 +123,9 @@ public class App {
 		System.out.print("\n");
 		gerVoos.buscarPorData(datahora1);
 		System.out.print("\n");
-		System.out.print("\n");
 
 		/*
-		 * 
+		 *	Teste dos metodos `distancia` e `retornaDistancia` criados na classe 'Geo' 
 		 */
 
 		double distanciaStatic = Geo.distancia(aeroporto1.getLocal(), aeroporto4.getLocal());
@@ -138,5 +134,17 @@ public class App {
 		Geo gerGeo = new Geo();
 		double distancia = gerGeo.retornaDistancia(aeroporto1.getLocal());
 		System.out.println("Distancia entre os aeroportos de " + aeroporto1.getNome() + " e Guarulhos: " + distancia);
+		System.out.println("\n");
+
+		/*
+		 *  Teste dos metodos implementados provenientes das interfaces implementadas nas classes Aeronave, Aeroporto e Rota
+		 */
+
+		System.out.println("Quantidade de objetos 'Aeronave': " + aeronave3.qntdObjetos() + "\n");
+		System.out.println("Mostrando os aeroportos por ordem alfabetica: ");
+		gerAeroporto.ordenaAeroportosNome();
+		System.out.println();
+		System.out.println("Mostrando as rotas pela ordem alfabetica das companhias aereas: ");
+		gerRotas.ordenaRotaNomeCiaAerea();
 	}
 }
